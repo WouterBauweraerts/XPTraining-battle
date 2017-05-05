@@ -35,4 +35,16 @@ public class ArmyTest {
 
         Assertions.assertThat(army.getSoldiers()).containsExactly(wouter, jens);
     }
+
+    @Test
+    public void getFrontman_ReturnsWouter(){
+        Army army = new Army();
+        Soldier wouter = new SoldierBuilder().withName("Wouter").build();
+        Soldier jens = new SoldierBuilder().withName("Jens").build();
+        Soldier stijn = new SoldierBuilder().withName("Stijn").build();
+
+        army.enrollSoldiers(wouter, jens, stijn);
+
+        Assertions.assertThat(army.getFrontman()).isEqualTo(wouter);
+    }
 }

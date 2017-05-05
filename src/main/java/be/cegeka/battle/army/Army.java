@@ -16,4 +16,8 @@ public class Army {
     public void enrollSoldiers(Soldier... soldiers) {
         this.soldiers.addAll(Arrays.asList(soldiers));
     }
+
+    public Soldier getFrontman() {
+        return soldiers.get(0);
+    }
 }
