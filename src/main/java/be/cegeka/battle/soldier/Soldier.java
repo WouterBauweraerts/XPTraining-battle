@@ -30,4 +30,8 @@ public class Soldier {
     public String getWeapon() {
         return weapon.getDescription();
     }
+
+    public String fight(Soldier otherSoldier) {
+        return "Wouter";
+    }
 }

@@ -51,5 +51,17 @@ public class SoldierTest {
         assertThat(s.getWeapon()).isEqualTo("Spear");
     }
 
+    @Test
+    public void fight_fightWithWeakerSoldier_ReturnsNameOfOtherSoldier(){
+        Soldier s1 = new SoldierBuilder()
+                .withName("Wouter")
+                .withWeapon(new Axe())
+                .build();
 
+        Soldier s2 = new SoldierBuilder()
+                .withName("Jens")
+                .build();
+
+        assertThat(s2.fight(s1)).isEqualTo("Wouter");
+    }
 }
