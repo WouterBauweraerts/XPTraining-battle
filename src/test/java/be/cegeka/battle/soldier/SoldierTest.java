@@ -1,5 +1,7 @@
-package be.cegeka.battle;
+package be.cegeka.battle.soldier;
 
+import be.cegeka.battle.WeaponType;
+import be.cegeka.battle.soldier.Soldier;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,5 +1,6 @@
-package be.cegeka.battle;
+package be.cegeka.battle.soldier;
 
+import be.cegeka.battle.WeaponType;
 import org.apache.commons.lang3.Validate;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
