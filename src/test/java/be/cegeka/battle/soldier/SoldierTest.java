@@ -50,4 +50,6 @@ public class SoldierTest {
         Soldier s = new Soldier("Wouter", new Spear());
         assertThat(s.getWeapon()).isEqualTo("Spear");
     }
+
+
 }
