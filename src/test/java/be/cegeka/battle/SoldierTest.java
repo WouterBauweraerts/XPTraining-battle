@@ -11,6 +11,7 @@ public class SoldierTest {
         Soldier soldier = new Soldier("name");
 
         assertThat(soldier.getName()).isEqualTo("name");
+        assertThat(soldier.getWeapon()).isEqualTo("Bare Fist");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -27,5 +28,6 @@ public class SoldierTest {
     public void construction_ASoldierMustHaveAName_CannotBeBlank() {
         new Soldier("   ");
     }
+
 
 }
