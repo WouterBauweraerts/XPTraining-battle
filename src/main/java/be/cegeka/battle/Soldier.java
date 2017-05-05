@@ -7,13 +7,18 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 public class Soldier {
 
     private String name;
-    private String weapon;
+    private WeaponType weapon;
 
     public Soldier(String name) {
         Validate.isTrue(isNotBlank(name));
 
         this.name = name;
-        this.weapon = "Bare Fist";
+        this.weapon = WeaponType.BARE_FIST;
+    }
+
+    public Soldier(String name, WeaponType weapon) {
+        this.name = name;
+        this.weapon = weapon;
     }
 
     String getName() {
@@ -21,6 +26,6 @@ public class Soldier {
     }
 
     public String getWeapon() {
-        return weapon;
+        return weapon.toString();
     }
 }

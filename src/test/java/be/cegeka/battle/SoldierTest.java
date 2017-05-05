@@ -29,5 +29,21 @@ public class SoldierTest {
         new Soldier("   ");
     }
 
+    @Test
+    public void construction_givenWeaponSword_getWeaponReturnsSword(){
+        Soldier s = new Soldier("Wouter", WeaponType.SWORD);
+        assertThat(s.getWeapon()).isEqualTo("Sword");
+    }
 
+    @Test
+    public void construction_givenWeaponAxe_getWeaponReturnsAxe(){
+        Soldier s = new Soldier("Wouter", WeaponType.AXE);
+        assertThat(s.getWeapon()).isEqualTo("Axe");
+    }
+
+    @Test
+    public void construction_givenWeaponSpear_getWeaponReturnsSpear(){
+        Soldier s = new Soldier("Wouter", WeaponType.SPEAR);
+        assertThat(s.getWeapon()).isEqualTo("Spear");
+    }
 }
