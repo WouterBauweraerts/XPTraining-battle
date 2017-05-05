@@ -4,10 +4,11 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SwordTest {
+public class SpearTest {
+
     @Test
     public void getDamage_shouldReturnTwo(){
-        Weapon weapon = new Sword();
+        Weapon weapon = new Spear();
 
         assertThat(weapon.getDamage()).isEqualTo(2);
     }
