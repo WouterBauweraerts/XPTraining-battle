@@ -5,4 +5,11 @@ public class Axe implements Weapon {
     public int getDamage() {
         return 3;
     }
+
+    @Override
+    public String getDescription() {
+        return "Axe";
+    }
+
+
 }

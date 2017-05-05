@@ -5,4 +5,9 @@ public class Sword implements Weapon {
     public int getDamage() {
         return 2;
     }
+
+    @Override
+    public String getDescription() {
+        return "Sword";
+    }
 }
