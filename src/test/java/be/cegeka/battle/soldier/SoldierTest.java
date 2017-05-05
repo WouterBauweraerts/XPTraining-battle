@@ -52,7 +52,7 @@ public class SoldierTest {
     }
 
     @Test
-    public void fight_fightWithWeakerSoldier_ReturnsNameOfOtherSoldier(){
+    public void fight_fightWithWeakerSoldier_ReturnsWouter(){
         Soldier s1 = new SoldierBuilder()
                 .withName("Wouter")
                 .withWeapon(new Axe())
@@ -63,5 +63,48 @@ public class SoldierTest {
                 .build();
 
         assertThat(s2.fight(s1)).isEqualTo("Wouter");
+    }
+
+    @Test
+    public void fight_fightWithWeakerSoldier_ReturnsStijn(){
+        Soldier s1 = new SoldierBuilder()
+                .withName("Stijn")
+                .withWeapon(new Axe())
+                .build();
+
+        Soldier s2 = new SoldierBuilder()
+                .withName("Jens")
+                .build();
+
+        assertThat(s2.fight(s1)).isEqualTo("Stijn");
+    }
+
+    @Test
+    public void fight_fightWithWeakerSoldier_ReturnsJens(){
+        Soldier s1 = new SoldierBuilder()
+                .withName("Wouter")
+                .build();
+
+        Soldier s2 = new SoldierBuilder()
+                .withName("Jens")
+                .withWeapon(new Axe())
+                .build();
+
+        assertThat(s2.fight(s1)).isEqualTo("Jens");
+    }
+
+    @Test
+    public void fight_withEqualWeapons_returnsWouter() throws Exception {
+        Soldier s1 = new SoldierBuilder()
+                .withName("Wouter")
+                .withWeapon(new Axe())
+                .build();
+
+        Soldier s2 = new SoldierBuilder()
+                .withName("Jens")
+                .withWeapon(new Axe())
+                .build();
+
+        assertThat(s1.fight(s2)).isEqualTo("Wouter");
     }
 }

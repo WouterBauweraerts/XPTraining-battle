@@ -4,6 +4,11 @@ import be.cegeka.battle.weapon.BareFist;
 import be.cegeka.battle.weapon.Weapon;
 import org.apache.commons.lang3.Validate;
 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 public class Soldier {
@@ -32,6 +37,10 @@ public class Soldier {
     }
 
     public String fight(Soldier otherSoldier) {
-        return "Wouter";
+        return weapon.getDamage() >= otherSoldier.getWeaponDamage() ? name : otherSoldier.getName();
+    }
+
+    public int getWeaponDamage() {
+        return weapon.getDamage();
     }
 }
